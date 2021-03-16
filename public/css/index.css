@@ -3,139 +3,177 @@
     margin:0;
     box-sizing: border-box;
 }
-html{
-    height: 100%;
-}
 :root{
-    --primary-color:#231F20;
-    --secondary-color:#cd2128;
+    --primary-color:#cd2128;
     --complimentary-color:#21cdc6;
-    --ternary-color:#929394;
+    --secondary-color:#929394;
+
 }
-body{
-    overflow-x: hidden;
-    height: 100%;
-    background-color: #ffff;
+@font-face{
+    font-family: main_Font;
+    src: url(/fonts/MADE\ Bon\ Voyage\ Regular\ PERSONAL\ USE.otf);
 }
-.navigation{
+nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px;
     align-items: center;
 }
-#logo_image{
-    width: 80px;
-    border: none;
-}
-#logo_div{
-    display: flex;
-    flex-direction: row;
-}
-#logo_text{
-    align-self: center;
-    margin-left: 5px;
-    font-family: 'Montserrat',sans-serif;
-    font-size: 1rem;
+.links{
+    text-decoration: none;
+    color: white;
+    font-family: main_Font;
+    margin-right: 100px;
+    font-size: 1.2rem;
     font-weight: bolder;
 }
-.pages{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.links:hover{
+    color: var(--complimentary-color);
 }
-.links{
-    margin-right: 50px;
-    text-decoration: none;
-    font-family: 'Montserrat',sans-serif;
-    color: black;
-}
-#intro_section{
-    height: 85vh;
+#landing_page{
     width: 100vw;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/header-img.jpg);
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.1)),url('/images/header-img.jpg') ;
     background-size: cover;
-    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
 }
-#opening_statement{
-    text-align: center;
-    margin-left: 20px;
-    width:500px;
-    position: absolute;
-    top:30%;
-}
-#opening_statement_paragraph{
-    color: white;
-    font-family:'PT Serif',sans-serif ;
-    font-size: 2rem;
-}
-.btn-primary{
-  background-color: var(--secondary-color) !important;
-  border-color: var(--secondary-color) !important;
-  font-family: 'PT Serif',sans-serif;   
+#logo_img{
+    width: 100px;
 }
 
-#intro_paragraph{
+.btn-warning{
+    border-radius: 20px !important;
+    color: white !important;
+    width: 130px;
+    font-weight: bolder !important;
+}
+.cont{
+    visibility: hidden;
+}
+.circle button{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    height: 100px;
+    background: transparent;
+    border:0;
+    font-size: 26px;
     color: white;
-    font-family: 'PT Serif';
-    font-size: 1.2rem;
-    margin-top: 15px;
 }
-.cards{
-    color: white;
-    padding: 10px;
-    font-family: 'PT Serif',sans-serif;
+.circle button:focus{
+    outline: none;
 }
-#mission{
-    background-color: rgb(24, 155, 150);
+.circle button#open{
+    left:60%;
 }
-#vision{
- background-color: rgb(28, 170, 165);
+.circle button#close{
+    top:60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
 }
-#goals{
-background-color: var(--complimentary-color);    
+.circle-cont{
+    position: fixed;
+    top:-100px;
+    left:-100px;
 }
-#what_we_do{
-    padding: 30px;
+.circle{
+    background-color: var(--primary-color);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
 }
-#org_bio{
-    font-family: 'PT Serif';
-}
-#org_bio h4{
-    color: var(--secondary-color)
-}
-#mission_statement{
-    padding: 30px;
-}
-#support h4{
-    color: #ffff;
-}
-#support{
-    padding: 20px;
-    color: #ffff;
-    background-color: var(--secondary-color);
-}
-#projects{
- font-family: 'PT Serif',sans-serif;
-}
-.card-body{
-    padding: 10px;
-}
-#heading{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.fa-angle-right{
+.nav-btn{
+    border:none;
+    background-color: transparent;
     cursor: pointer;
+    font-size: 20px;
 }
-footer{
-    margin-top: 20px;
-    background-color: black;
-    padding: 50px;
-    color: white;
-    font-family: 'PT Serif',sans-serif;
+.nav{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    transform:translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+.nav.visible{
+    transform: translateX(0);
+}
+.nav-black{
+    background-color: rgb(34, 31, 31) ;
+    width:60%;
+    max-width: 480px;
+    min-height: 320px;
+    transition-delay: 0.4s;
+}
+.nav-black.visible{
+    transition-delay: 0s;
+}
+.nav-red{
+    background-color: var(--primary-color) ;
+    width:95%;
+    transition-delay: 0.2s;
+}
+.nav-red.visible{
+    transition-delay: 0.2s;
+}
+.nav-white{
+    background-color: #ffff ;
+    width:95%;
+    padding: 40px;
+    position: relative;
+    transition-delay: 0s;
+}
+.nav-white.visible{
+    transition-delay: 0.4s;
+}
+.close-btn{
+    position:absolute;
+    top:40px;
+    right: 40px;
+    opacity: 0.3;
+}
+.list{
+    list-style-type: none;
+    padding:10px;
+}
+.list li{
+    margin: 20px 0;
+}
+.list li a{
+    color: rgb(34, 31, 31);
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.list ul{
+    list-style-type:none;
+    padding-left:20px ;
+}
+#test{
+    display: flex;
+    flex-direction: column-reverse;
+}
+@media (max-width:1200px){
+    .links{
+        margin-right: 40px;
+        font-size: 1rem;
+    }
+}
+@media (max-width:800px){
+    .links{
+        margin-right: 20px;
+        font-size: 1rem;
+    }
+}
+@media (max-width:714px){
+    nav{
+        display: none
+    }
+    .cont{
+        visibility: visible;
+    }
+    
 }
