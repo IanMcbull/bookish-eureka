@@ -13,7 +13,7 @@
  <body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   <header id="landing_page">
-    <nav class="container">
+    <nav>
      <a href="#"><img src="/logo/logo.png" id="logo_img"></a>
      <div id="links">
       <a href="#" class="links">Home</a>
@@ -37,11 +37,10 @@
   <div class="nav nav-black">
     <div class="nav nav-red">
         <div class="nav nav-white">
-           
             <button class="nav-btn close-btn">
                 <i class="fas fa-times"></i>
             </button>
-            <img src="/logo/logo.png" alt="logo" style="width: 150px;">
+            <img src="/logo/logo.png" alt="logo" class="img-fluid">
             
            <ul class="list">
             <li><a href="#">Home</a></li>
@@ -58,8 +57,59 @@
         </div>
     </div>
 </div>
+ <div id="text_opening">
+  <p id="first_p">We provide a <span style="color: rgb(12, 212, 12);"> voice</span> for the special <span style="color:#21cdc6;">needs</span> community in <span style="color: yellow;">Kenya</span></p>
+  <p id="second_p">
+    Rare Disorders Kenya is a community of people with rare diseases and all who support them. We provide a united voice for the rare disease community by capturing the experiences of patients and families and raising the profile of rare diseases across Kenya.
+  </p>
+  <div id="header_buttons">
+    <button class="btn btn-info">Contact Us</button>
+    <button class="btn btn-dark">Learn More</button>
+  </div>
+ </div>
   </header>
+  <!--End Of header section-->
+  <section id="org_bio">
+     <div class="box" id="box_1"><p>About Us</p></div>
+     <div class="box row" id="box_2">
+       <div class="mission_header col-md-3">
+         <p id="mission_header">Our Mission</p>
+       </div>
+       <div class="col-md-9">
+           <p class="mission_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, officiis corrupti et nemo, inventore similique provident, quasi quis beatae dolor modi fuga aperiam. Minus qui provident deleniti consequuntur? Eos illo harum impedit facilis, enim repellat, repellendus nostrum eaque animi nulla, ipsam fuga in quis aspernatur quasi! Soluta quidem beatae at deserunt non consectetur possimus quasi labore. Enim, asperiores? Nam voluptatem nisi voluptas ad id hic eum doloribus vitae, error pariatur!</p>
+           <p class="mission_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde exercitationem placeat ab, consectetur, eius impedit similique ut excepturi velit natus eos magnam nam, accusantium quidem. Eos expedita voluptas natus ad, officiis hic? Sunt voluptatibus suscipit temporibus corporis modi consectetur praesentium distinctio dolore veritatis fugit. Sapiente veritatis aliquam sit perferendis consectetur temporibus optio, commodi cupiditate quibusdam repellat nobis impedit quis totam veniam itaque unde hic in mollitia consequatur eveniet corrupti. Necessitatibus.</p>
+       </div>
+     </div>
+     <div class="box row" id="box_3">
+        <div class="vision_header col-md-3">
+            <p id="vision_header">Our Vision</p>
+          </div>
+          <div class="col-md-9">
+              <p class="vision_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, officiis corrupti et nemo, inventore similique provident, quasi quis beatae dolor modi fuga aperiam. Minus qui provident deleniti consequuntur? Eos illo harum impedit facilis, enim repellat, repellendus nostrum eaque animi nulla, ipsam fuga in quis aspernatur quasi! Soluta quidem beatae at deserunt non consectetur possimus quasi labore. Enim, asperiores? Nam voluptatem nisi voluptas ad id hic eum doloribus vitae, error pariatur!</p>
+              <p class="vision_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde exercitationem placeat ab, consectetur, eius impedit similique ut excepturi velit natus eos magnam nam, accusantium quidem. Eos expedita voluptas natus ad, officiis hic? Sunt voluptatibus suscipit temporibus corporis modi consectetur praesentium distinctio dolore veritatis fugit. Sapiente veritatis aliquam sit perferendis consectetur temporibus optio, commodi cupiditate quibusdam repellat nobis impedit quis totam veniam itaque unde hic in mollitia consequatur eveniet corrupti. Necessitatibus.</p>
+          </div>
+     </div>
+     <!-- <div class="box row" id="box_4">
+        <div class="values_header col-md-3">
+            <p id="values_header">Our Values</p>
+          </div>
+          <div class="col-md-9">
+              <ul class="values_list">
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam recusandae natus vero, repellat totam facere nemo assumenda cupiditate? Quasi, dolorum!</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam recusandae natus vero, repellat totam facere nemo assumenda cupiditate? Quasi, dolorum!</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam recusandae natus vero, repellat totam facere nemo assumenda cupiditate? Quasi, dolorum!</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam recusandae natus vero, repellat totam facere nemo assumenda cupiditate? Quasi, dolorum!</li>
+              </ul>
+          </div>
+     </div> -->
+  </section>
   <script src="/index.js"></script>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script>
+        particlesJS.load('box_1', '/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+    </script>
  </body>
  </html>
 

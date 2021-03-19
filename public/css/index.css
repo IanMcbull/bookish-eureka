@@ -7,7 +7,10 @@
     --primary-color:#cd2128;
     --complimentary-color:#21cdc6;
     --secondary-color:#929394;
-
+    --ternary-color:#000000;
+}
+body{
+    overflow-x: hidden;
 }
 @font-face{
     font-family: main_Font;
@@ -33,7 +36,7 @@ nav{
 #landing_page{
     width: 100vw;
     height: 100vh;
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.1)),url('/images/header-img.jpg') ;
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)),url('/images/header-img.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -50,6 +53,7 @@ nav{
 }
 .cont{
     visibility: hidden;
+    z-index: 1;
 }
 .circle button{
     position: absolute;
@@ -76,6 +80,7 @@ nav{
     position: fixed;
     top:-100px;
     left:-100px;
+    z-index: 1;
 }
 .circle{
     background-color: var(--primary-color);
@@ -97,6 +102,7 @@ nav{
     height: 100vh;
     transform:translateX(-100%);
     transition: transform 0.3s ease-in-out;
+    z-index: 1;
 }
 .nav.visible{
     transform: translateX(0);
@@ -156,10 +162,108 @@ nav{
     display: flex;
     flex-direction: column-reverse;
 }
+#text_opening{
+    font-family: mainFont;
+    text-transform: capitalize;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    position: absolute;
+    left: 5%;
+    top:30%;   
+}
+#first_p{
+    font-size: 2.5em;
+    line-height: 1;
+}
+#second_p{
+text-align: justify;
+font-size: 1.3em;
+}
+#header_buttons{
+    display: flex;
+    justify-content:left;
+    margin-top: 15px;
+}
+.btn{
+    border-radius: 0 !important;
+    width: 120px;
+    font-size: 1.2em !important;
+
+}
+.btn-info{
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+.btn-dark{
+    margin-left: 15%;
+}
+#org_bio{
+    display: flex;
+    flex-direction: column;  
+}
+.box{
+    height: 400px;
+    font-family: my_Font;
+}
+#box_1 p{
+    text-align: center;
+    padding: 20px;
+    font-size: 3em;
+    position: relative;
+    top:30%; 
+}
+#mission_header{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#vision_header{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#box_2{
+    background-color: var(--primary-color);
+    color: white;
+    padding:70px;
+}
+#box_3{
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url('/images/vision_img.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding:70px;
+    color: white;
+}
+/* #box_4{
+    padding:70px;
+    color: black;   
+}
+.values_list{
+    text-align: justify;
+    list-style-type: disc;
+}
+#values_header{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+} */
 @media (max-width:1200px){
     .links{
         margin-right: 40px;
         font-size: 1rem;
+    }
+}
+@media (max-width:1030px){
+    #box_2{
+        height: 600px;
+    }
+    #box_3{
+        height: 600px;
     }
 }
 @media (max-width:800px){
@@ -175,5 +279,71 @@ nav{
     .cont{
         visibility: visible;
     }
+    #first_p{
+        font-size: 2em;
+        line-height: 1;
+    }
+    #second_p{
+    text-align: justify;
+    font-size: 1em;
+    font-weight: bold;
+    }
+    #text_opening{
+        left:3%;
+        top:40%;
+        padding: 10px;
+    }
+    .btn{
+        border-radius: 0 !important;
+        width: 110px;
+        font-size: 1em !important;
     
+    }
+    .btn-dark{
+        margin-left: 10%;
+    }
+    #landing_page{
+        width: 100vw;
+        height: 100vh;
+        background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)),url('/images/header-img.jpg') ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #box_2{
+        height: 600px;
+    }
+    #box_3{
+        height: 600px;
+    }
+    #box_1 p{
+        text-align: center;
+        padding: 10px;
+        font-size: 2em;
+        position: relative;
+        top:30%; 
+    }
+    #mission_header{
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    #vision_header{
+        font-size: 1.5em;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    #box_2{
+        background-color: var(--primary-color);
+        color: white;
+        padding:50px;
+    }
+    #box_3{
+        background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url('/images/vision_img.jpg') ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding:40px;
+        color: white;
+    }    
 }
