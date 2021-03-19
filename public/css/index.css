@@ -316,6 +316,9 @@ font-size: 1.3em;
     #box_3{
         height: 700px;
     }
+    #box_1{
+        background-color: var(--complimentary-color);
+    }
     #box_1 p{
         text-align: center;
         padding: 10px;
