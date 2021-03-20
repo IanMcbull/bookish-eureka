@@ -371,10 +371,10 @@ font-size: 1.3em;
 }
 @media (max-width:400px){
     #box_2{
-        height: 800px;
+        height: 900px;
     }
     #box_3{
-        height: 800px;
+        height: 900px;
     }
 
 }
