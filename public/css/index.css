@@ -372,9 +372,11 @@ font-size: 1.3em;
 @media (max-width:400px){
     #box_2{
         height: 900px;
+        padding: 40px;
     }
     #box_3{
         height: 900px;
+        padding: 40px;
     }
 
 }
