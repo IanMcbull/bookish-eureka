@@ -41,7 +41,7 @@ nav{
     background-repeat: no-repeat;
     background-position: center;
 }
-#logo_img{
+.logo_img{
     width: 100px;
 }
 
@@ -83,7 +83,7 @@ nav{
     z-index: 1;
 }
 .circle{
-    background-color: var(--primary-color);
+    background-color: #ffc107;;
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -237,6 +237,25 @@ font-size: 1.3em;
     background-position: center;
     padding:70px;
     color: white;
+}
+#footer{
+    background-color: black;
+    padding:50px;
+    font-family: my_Font;
+}
+#footer h5{
+    color: yellow;
+}
+.tweeter_feed{
+    color: white;
+}
+#stats{
+    max-height: 450px;
+    padding: 20px;
+    font-family: my_Font;
+}
+#myChart{
+    max-height: 450px;
 }
 /* #box_4{
     padding:70px;
